@@ -1,0 +1,31 @@
+<div class="container">
+    <form class="form-horizontal" name="formName">
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Username</label>
+            <div class="col-sm-6">
+                <input type="text" ng-model="username" class="form-control" placeholder="Username" required/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Password</label>
+            <div class="col-sm-6">
+                <input type="password" ng-model="password" class="form-control" placeholder="Password" required/>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button class="btn btn-primary btn-lg" type="button" ng-click="ok()" ng-disabled="!formName.$valid">
+                    Login
+                </button>
+
+                <button class="btn btn-primary btn-lg" type="button" ng-click="register()">
+                    Register
+                </button>
+                <span style="color: red; ">{{loginError}}</span>
+            </div>
+
+        </div>
+
+    </form>
+
+</div>

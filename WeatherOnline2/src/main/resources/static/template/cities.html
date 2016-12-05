@@ -1,0 +1,46 @@
+<div class="container">
+    <style>
+        .btn-label {position: relative;left: -12px;display: inline-block;padding: 6px 12px;background: rgba(0,0,0,0.15);border-radius: 3px 0 0 3px;}
+        .btn-labeled {padding-top: 0;padding-bottom: 0;}
+        .btn { margin-bottom:10px; }
+    </style>
+    <form class="form-inline" name="formName">
+        <button class="btn btn-primary" type="button" ng-click="logout()" style="float: right; margin-left: 5px;">Logout</button>
+        <h4 style="float: right;">Logged as: <span style="color: blue; float: right;" >{{loggedUser.username}}</span></h4>
+    </form>
+
+    <form class="form-inline">
+        <div class="form-group">
+            <input type="text" ng-model="cityName" class="form-control" placeholder="City Name" required/>
+            <button class="btn btn-outline-success" type="button" ng-click="add()" style="float: right; margin-left: 5px;">Add City</button>
+
+        </div>
+    </form>
+    <span style="color: red; ">{{error}}</span>
+    <h1>Cities</h1>
+    <table class="table table-striped">
+        <thead>
+        <!--<th>#</th>-->
+        <!--<th>id</th>-->
+        <th ng-show="loggedUser">City Name</th>
+        <th ng-show="loggedUser">Actions</th>
+        </thead>
+        <tr ng-repeat="city in loggedUser.cities track by city.cityId">
+            <!--<td>{{$index + 1}}</td>-->
+            <!--<td>{{city.cityId}}</td>-->
+            <td ng-show="loggedUser">
+                <button type="button" style="font-size:20px" class="btn btn-link btn-labeled" ng-click="view(city.cityId)">{{city.cityName}}</button>
+            </td>
+            <td ng-show="loggedUser">
+                <button class="btn btn-danger btn-labeled" type="button" ng-click="delete(city.cityId)">
+                    <span class="btn-label"><i class="glyphicon glyphicon-trash"></i></span>Delete</button>
+                </button>
+            </td>
+        </tr>
+    </table>
+
+
+
+
+
+</div>

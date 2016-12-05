@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>Main Page</title>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+
+
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
+    <script src="bower_components/ngstorage/ngStorage.min.js"></script>
+    <script src="bower_components/angular/ui-bootstrap-tpls-1.2.5.min.js"></script>
+    <script src="Weather.js"></script>
+    <script src="controller/LoginController.js"></script>
+    <script src="controller/CityController.js"></script>
+    <script src="controller/WeatherController.js"></script>
+    <script src="controller/RegisterController.js"></script>
+    <script src="services/user-service.js"></script>
+
+</head>
+<body>
+
+<nav class="navbar navbar-dark bg-primary">
+{{}}
+
+    <h3 style="text-align: center;">Weather Online</h3>
+</nav>
+
+
+
+
+
+
+<div ng-view class="view"></div>
+
+
+
+</body>
+</html>

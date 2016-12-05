@@ -1,0 +1,30 @@
+<div class="container">
+    <form class="form-inline" name="formName">
+        <button class="btn btn-primary" type="button" ng-click="logout()" style="float: right; margin-left: 5px;">Logout</button>
+        <h4 style="float: right;">Logged as: <span style="color: blue; float: right;" >{{loggedUser}}</span></h4>
+    </form>
+    <h1>Weather</h1>
+    <table class="table table-striped">
+        <thead>
+        <!--<th>#</th>-->
+        <th>Day</th>
+        <th>Temperature</th>
+        <th>Humidity</th>
+        <th>Pressure</th>
+        <th>Windspeed</th>
+        <th>Sky</th>
+        </thead>
+        <tr ng-repeat="zi in weather">
+            <!--<td>{{$index + 1}}</td>-->
+            <td>{{zi.day}} </td>
+            <td>{{zi.temp}} &#8451;</td>
+            <td>{{zi.humidity}} %</td>
+            <td>{{zi.pressure}} hPa</td>
+            <td>{{zi.windspeed}} km/h</td>
+            <td>{{zi.sky}}</td>
+        </tr>
+    </table>
+    <button class="btn btn-danger btn-sm" type="button" ng-click="back()">
+        Back
+    </button>
+</div>

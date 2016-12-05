@@ -1,0 +1,24 @@
+<div class="modal-header">
+    <h3 class="modal-title">Register</h3>
+</div>
+<div class="modal-body">
+    <form class="form-horizontal" name="formName">
+        <div class="form-group">
+            <label for="inputUsername" class="col-sm-2 control-label">Username</label>
+            <div class="col-sm-10">
+                <input type="text" ng-model="Username" class="form-control" id="inputUsername" placeholder="Username" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputPassword" class="col-sm-2 control-label">Password</label>
+            <div class="col-sm-10">
+                <input type="password" ng-model="Password" class="form-control" id="inputPassword" placeholder="Password" required>
+            </div>
+        </div>
+        <span style="color: red; ">{{error}}</span>
+    </form>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" type="button" ng-click="register()" ng-disabled="!formName.$valid">Register</button>
+    <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+</div>
